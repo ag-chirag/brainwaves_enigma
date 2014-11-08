@@ -36,6 +36,11 @@ public class SignUp extends Activity implements SignUpDelegate
 		String email="";
 		String pwd="";
 
+//		if(extras!=null)
+//		{
+//			email = extras.getString("email");
+//			pwd = extras.getString("pwd");
+//		}
 
 		if(email!="" || pwd!="")
 		{
@@ -55,24 +60,34 @@ public class SignUp extends Activity implements SignUpDelegate
 		String email_text = email.getText().toString();
 		String pwd_text = pwd.getText().toString();
 
-
+//		String[] name_value = name.getText().toString().split("\\s+");
+//		String name_in_url = "";
+//		for(int i=0;i<name_value.length;i++)
+//		{
+//			name_in_url = name_in_url + name_value[i];
+//			if(i!=name_value.length-1)
+//				name_in_url = name_in_url + "+";
+//		}
 
 		if((email_text.length()<=0) || (pwd_text.length()<=0))
 		{
 
-
+//			((TextView)findViewById(R.id.error)).setText("Error: All fields are mandatory!");
 			return;
 		}
 		else
 		{
 			if(!validate(email_text))
 			{
-
+//				((TextView)findViewById(R.id.error)).setText("Error: Invalid email id!");
 				return;    			
 			}
 		}
 
 
+		//  	String url = "http://zootr.co//cric/api/player_profile/save/?password="+pwd_text+"&email="+email_text+"&image_url=https:%2F%2Flh3.googleusercontent.com%2F-XdUIqdMkCWA%2FAAAAAAAAAAI%2FAAAAAAAAAAA%2F4252rscbv5M%2Fphoto.jpg&name="+name_in_url;
+
+		//  		new JSONParser().execute(url);
 		if(signUpManager == null){
 			signUpManager = new SignUpManager(this);
 		}
@@ -91,14 +106,22 @@ public class SignUp extends Activity implements SignUpDelegate
 	}
 
 	public void failSignUp(String errorDesc, int type) {
+		
+//		findViewById(R.id.signup_head).setVisibility(View.VISIBLE);
+//		findViewById(R.id.signup_box).setVisibility(View.VISIBLE);
+//		findViewById(R.id.waiting).setVisibility(View.GONE);
+//		((TextView)findViewById(R.id.error)).setText(errorDesc);
 	}
 
 	@Override
 	public void notifySginUp(SignUpResponseJson signUpResponseJsons) {
-
+		// TODO Auto-generated method stub
+//		Log.d("zootr", "notifySginUp " + signUpResponseJsons.getId() );
 		if(signUpResponseJsons.getUserId() > 0)
 		{
-
+//			Utils.saveData("userid", signUpResponseJsons.getUserId());
+//			Utils.saveData("name", signUpResponseJsons.getName());
+//			Utils.saveData("signedin", true);
 	        SharedPreferences.Editor editor;
 	        SharedPreferences userid = getSharedPreferences("userid",0);
 	        SharedPreferences name = getSharedPreferences("name",0);

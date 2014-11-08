@@ -50,6 +50,8 @@ public class SignUpContext {
 				}
 				
 				if(queue != null ){
+					
+					Log.i("zootr", "live fixtureService " + queue.getQueue().size());
 					queue.getQueue().clear();
 				}
 			} catch (Exception e) {
