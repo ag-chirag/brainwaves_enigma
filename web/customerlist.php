@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,6 +35,7 @@
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
       die();
 	}
+    $_SESSION['person'] = $_GET['operation'];
   	$result = mysqli_query($con,"select p.pan, c.fname, c.lname, p.purpose, p.id from purpose as p, customer as c where p.category='$_GET[operation]' and p.pan = c.pan");
   	if(mysqli_num_rows($result) == 0)
   	{

@@ -39,6 +39,7 @@
       }
       else 
       {
+        $time1 = time();
         echo "<p>";
         echo "<b>Account:</b> ".$row['pan']."<br/><br/>";
         echo "<b>Name:</b> ".$row['fname']. " " .$row['lname']."<br/><br/>";
@@ -47,7 +48,7 @@
         echo "<b>Purpose:</b> ".$_GET['purpose'];
         echo "</p><br/>";
         echo "<div class=\"normal\">";
-        echo "<button name=\"login\" class=\"login login-submit\" onclick=\"location.href = 'deletelist.php?id=".$_GET['id']."';\">Done</button><br><br>";
+        echo "<button name=\"login\" class=\"login login-submit\" onclick=\"location.href = 'deletelist.php?id=".$_GET['id']."&t1=".$time1."';\">Done</button><br><br>";
         echo "</div>";
       }
       mysqli_close($con);

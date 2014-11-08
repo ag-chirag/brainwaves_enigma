@@ -18,6 +18,10 @@
   {
     $_SESSION['name']=$row['uname'];
     $_SESSION['id']=$row['id'];
+    $_SESSION['account']=1;
+    $_SESSION['transaction']=1;
+    $_SESSION['loan']=1;
+    $_SESSION['others']=1;
   }	
   mysqli_close($con);
   header('Location: home.php');
