@@ -1,0 +1,28 @@
+package com.example.qless;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ListView;
+
+public class SelectBankActivity extends Activity
+{
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.bank);
+		List<BankList> list = new ArrayList<BankList>();
+		ListView listView = (ListView) findViewById(R.id.bank_list);
+		listView.setAdapter(new BankAdaptor(SelectBankActivity.this, list));
+		
+		BankList b1 = new BankList();
+		b1.setBank_name("MSRIT");
+		BankList b2 = new BankList();
+		b2.setBank_name("RT Nagar");
+		BankList b3 = new BankList();
+		b3.setBank_name("Majectic");
+		
+	}
+}

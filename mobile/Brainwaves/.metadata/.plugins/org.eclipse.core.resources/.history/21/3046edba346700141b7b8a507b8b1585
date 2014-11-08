@@ -1,0 +1,63 @@
+package com.example.qless;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import android.util.Log;
+
+public class SignupPlayerProfileOperation implements Runnable {
+
+	SignUpManager signUpManager;
+	SignUpDelegate delegate;
+	public int id;
+	public String email;
+	public String match_id;
+	public String aboutMe 	 	;
+	public String currentLocation 	;
+	public String displayName 	;
+	public String gender 	 	;
+	public String image 	 	;
+	public String gPlusId;
+	public String fbId;
+
+
+	public void run() {
+		try {
+
+			if(Utils.isConnectedToNetwork()){
+
+				SignUpResponseJson  signUpResponseJsons ;
+				
+				Log.w("signup", "person Runnable SignupPlayerProfileOperation  " + gPlusId ) ;
+
+				
+				signUpResponseJsons 	= signUpManager.signupPlayerProfile(id, gPlusId, fbId,displayName, email, gender, image, currentLocation, match_id);
+
+				if(signUpResponseJsons != null ) {
+					delegate.notifySginUp(signUpResponseJsons);
+				}
+			}
+			else {
+				delegate.failSignUp(MainApplication.getContext().getString("No Network"), 1);
+			}
+
+		} catch (MalformedURLException e) {
+			Log.i("zootr", "IOException SignUpOperation  ", e);
+
+			delegate.failSignUp(MainApplication.getContext().getString(R.string.please_try_again_later), 2);
+
+
+		} catch (IOException e) {
+			Log.i("zootr", "IOException SignUpOperation  ", e);
+
+			delegate.failSignUp(MainApplication.getContext().getString(R.string.please_try_again_later), 2);
+
+		}catch (Exception e) {
+			Log.i("zootr", "IOException SignUpOperation  ", e);
+
+			delegate.failSignUp(MainApplication.getContext().getString(R.string.please_try_again_later), 2);
+			//e.printStackTrace();
+		}
+
+	}
+
+}

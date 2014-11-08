@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_world">Hello World</string>
+    <string name="version">1.0</string>
+    <string name="app_name">Matchup Cricket</string>
+    <string name="action_settings">Settings</string>
+    <!-- <string name="base_url">http://wisdenapi.wisdenindia.com/</string> -->
+    <!-- <string name="live_score_url">wp-content/themes/unspoken/zootr-mls-api.php?match_id</string> -->
+    <!-- <string name="base_url">http://dev.wisdenindia.com/pratik/</string> -->
+    <!-- <string name="live_score_url">/wp-content/themes/unspoken/mobile-live-score-api.php?match_id</string> -->
+
+    <string name="base_url">http://api.matchupcricket.com/</string>
+    <string name="live_score_url">/cric/api/match/scores/?match_id</string>
+    <string name="get_match_leaderboard_url">cric/api/player/leaderboard/list?</string>
+
+    <!-- http://dev.wisdenindia.com/pratik/wp-content/themes/unspoken/mobile-live-score-api.php -->
+
+    <string name="todo">TODO</string>
+    <string name="signup_url">cric/api/player_profile/save/?</string>
+    <string name="login_url">cric/api/player_profile/login/?</string>
+    <string name="player_bet_url">/cric/api/player/game/ball/bet/?</string>
+    <string name="unlock_achievement">/cric/api/player/achievement/unlock/?</string>
+    <string name="get_player_url">/cric/api/player_profile/get/?</string>
+    <string name="get_leaderboard_url">/cric/api/leaderboard/get/?</string>
+    <string name="get_gloabl_leaderboard_url">/cric/api/leaderboard/global/get/?</string>
+    <string name="matchup_request_url">/cric/api/player/game/matchup/request/?</string>
+    <string name="matchup_connect_url">/cric/api/player/game/matchup/update/status/?</string>
+    <string name="matchup_ping_url">/cric/api/player/game/matchup/ping/?</string>
+    <string name="matchup_abort_url">/cric/api/player/game/matchup/abort/?</string>
+    <string name="matchup_summary_url">cric/api/player/game/matchup/get/summary/?</string>
+    <string name="pre_match_toss_url">/cric/api/prematch/bets/toss/get/teams/?</string>
+    <string name="pre_match_toss_save_url">/cric/api/prematch/bets/toss/save/teams/?</string>
+    <string name="pre_match_play_url">cric/api/prematch/bets/play/get/?</string>
+    <string name="pre_match_play_save_url">cric/api/prematch/bets/play/save/?</string>
+    <string name="get_player_points_exchange_url">/cric/api/player/chips/exchange/?</string>
+    <string name="email_hint">Email</string>
+    <string name="pwd_hint">Password</string>
+    <string name="btn_name">Login</string>
+    <string name="signup">Signup</string>
+    <string name="accnt">Create Account</string>
+    <string name="name">Name</string>
+    <string name="signup_heading">Signup!</string>
+
+    <!--  -->
+    <!-- <string name="dev_AppSecret">KIVlAMHIRSOnIMlPeF6pog</string> -->
+    <!-- <string name="dev_AppKey">3EjkecRCSUa46FOUvEaqUg</string> -->
+    <string name="productionAppSecret">UTsDp2AgQaGy5venK8aImg</string>
+    <string name="productionAppKey">dPNCJpYxRG2HS9syT8Fclg</string>
+    <string name="notification">Push Notifications</string>
+
+    <!--  -->
+
+
+    <!-- <string-array name="planets_array"> -->
+    <!-- <item>Dashbord</item> -->
+    <!-- <item>Profile</item> -->
+    <!-- <item>Setting</item> -->
+    <!-- </string-array> -->
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_menu">Menu</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <!--  -->
+    <string name="no_fixtures">No matches available</string>
+    <string name="no_network">Please check network connectivity\n</string>
+    <string name="error_in_connecting_to_google_plus">Error in Connecting  to Google+ ...\n</string>
+    <string name="please_try_again_later">please try again later</string>
+    <string name="retray">Tap to Retry</string>
+    <string name="connecting">Connecting to Google+ ...</string>
+    <string name="connecting_zootr">Connecting to Server ...</string>
+    <string name="error_in_connecting">error in connecting...</string>
+    <string name="no_matches">No matches in this list at this moment</string>
+    <string name="no_matches_holly">Holy Cricket!!</string>
+    <string name="no_matches_why_not">Why not play a classic?</string>
+    <string name="you_havent">Tap here to signup</string>
+    <string name="loading">Loading...</string>
+    <string name="multiplayer">Multiplayer</string>
+    <string name="finding_player">Finding player…</string>
+    <string name="matchup_in_progress">Matchup in progress...</string>
+    <string name="watting_for_ball_update">Waiting for ball update...</string>
+    <string name="you_havent_achived">You haven\'t achieved</string>
+    <string name="why_not_play_more">Why not play more ?</string>
+
+    <!-- about -->
+
+    <string name="made_in_india">made in india</string>
+    <string name="powered_by">Powered by Zootr Sports</string>
+    <string name="about_us_heading"> ABOUT MATCHUP CRICKET </string>
+    <string name="about_us"> Matchup Cricket is an addictive game where fans can predict ball-by-ball in real-time during a match. The player has limited chips to play with and with every correct prediction, he / she wins specific points based on prediction. For e.g. for predicting a Six correctly, he/she gets 6 points. For wicket, 10 points are awarded and so on.
+
+\n\nThere are achievements to be unlocked along the journey that indicates the progress made by the player. Matchup Cricket is a complete social game where players can compete against the best predictors of the game and can see the top players in the leaderboard.</string>
+    <string name="about_us_2">Matchup Cricket is brought to you by </string>
+    <string name="zootr">Zootr Sports.</string>
+    <string name="litzscore_1">Data partner : </string>
+    <string name="litzscore">Litzscore </string>
+    <string name="litzscore_2"> for live score updates.</string>
+
+    <!-- about -->
+    <string name="faqs_url">http://matchupcricket.com/faqs.html</string>
+    <string name="google_analatic_id">UA-47840671-2 </string>
+
+    <!-- about -->
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="default_image_url">http://cdn.matchupcricket.com/images/playerbust.jpg</string>
+<!--     <string name="app_id_facebook">1472180722993687</string> -->
+    <string name="app_id_facebook">1511788445699581</string>
+    
+</resources>

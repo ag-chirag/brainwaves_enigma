@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="live_score_url"></string>
+    <string name="get_match_leaderboard_url">c</string>
+	<string name="app_name">QLess</string>
+    <string name="todo">TODO</string>
+    <string name="email_hint">Email</string>
+    <string name="pwd_hint">Password</string>
+    <string name="btn_name">Login</string>
+    <string name="signup">Signup</string>
+    <string name="accnt">Login</string>
+    <string name="name">Name</string>
+    <string name="signup_heading">LogIn!</string>
+    <string name="notification">Push Notifications</string> 
+    <string name="choose_bank">Choose a Bank</string>   
+</resources>
