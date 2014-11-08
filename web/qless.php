@@ -28,7 +28,6 @@
       <input type="password" name="pass" value="" placeholder="Password">
       <input type="submit" name="login" class="login login-submit" value="Sign in">
     </form>
-    <input type="submit" name="login" class="login login-submit" value="Account Registration">
   </div>
 
   </body>

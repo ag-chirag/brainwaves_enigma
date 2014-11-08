@@ -7,5 +7,5 @@
 	}
   mysqli_query($con,"INSERT INTO `waiting`( `pan`, `category`, `purpose`, `bid`) VALUES ($_GET[pan],'$_GET[category]','$_GET[purpose]',$_GET[bid])");
   mysqli_close($con);
-  //echo "DONE";
+  echo "1";
 ?>

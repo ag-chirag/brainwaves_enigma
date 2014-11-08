@@ -8,7 +8,7 @@
   	$result = mysqli_query($con,"SELECT * FROM waiting WHERE pan = $_GET[pan] ");
   	if(mysqli_num_rows($result) == 0)
   	{
-    	echo "<center>No customer found!</center></br>";
+    	echo "0";
     	die();
   	}
   	else 
@@ -31,5 +31,5 @@
     	mysqli_query($con,"DELETE FROM waiting WHERE pan = $_GET[pan]");
   	}
   	mysqli_close($con);
-  	//echo "DONE";
+  	echo "1";
 ?>
