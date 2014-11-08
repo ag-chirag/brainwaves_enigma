@@ -10,10 +10,11 @@
     $row = mysqli_fetch_array($result);
     $result1 = mysqli_query($con,"SELECT * FROM customertime");
     $row1 = mysqli_fetch_array($result1);
-    $a1 = $row1['account']/$_SESSION['account'];
-    $a2 = $row1['transaction']/$_SESSION['transaction']; 
-    $a3 = $row1['loan']/$_SESSION['loan'];
-    $a4 = $row1['others']/$_SESSION['others']; 
-    echo $row['account'] . "#" . $a1 ."#". $row['transaction'] . "#" . $a2 ."#" . $row['loan'] . "#" . $a3 ."#" . $row['others'] . "#" . $a4;
+    $a1 = $row1['account'];
+    $a2 = $row1['transaction']; 
+    $a3 = $row1['loan'];
+    $a4 = $row1['others'];
+    $res = $row['account'] . "#" . $a1 ."#". $row['transaction'] . "#" . $a2 ."#" . $row['loan'] . "#" . $a3 ."#" . $row['others'] . "#" . $a4;  
+    echo $res;
   	mysqli_close($con);
 ?>

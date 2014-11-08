@@ -20,7 +20,7 @@
 
         $result2 = mysqli_query($con,"SELECT * FROM customertime");
         $row2 = mysqli_fetch_array($result2);
-        $val = $row2[$_SESSION['person']] + $tdiff;
+        $val = ($row2[$_SESSION['person']] + $tdiff)/2;
         $cat = $_SESSION['person'];
         $_SESSION[$cat]++;
         echo $_SESSION[$cat];
