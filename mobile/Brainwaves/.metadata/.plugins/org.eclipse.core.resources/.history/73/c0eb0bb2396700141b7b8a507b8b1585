@@ -1,0 +1,24 @@
+package com.example.qless;
+
+public class SignUpResponseJson {
+
+private String userId;
+private int resCode;
+
+public String getUserId() {
+	return userId;
+}
+
+public void setUserId(String userId) {
+	this.userId = userId;
+}
+
+public int getResCode() {
+	return resCode;
+}
+
+public void setResCode(int resCode) {
+	this.resCode = resCode;
+}
+	
+}

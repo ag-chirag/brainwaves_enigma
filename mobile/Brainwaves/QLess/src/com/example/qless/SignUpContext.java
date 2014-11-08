@@ -1,0 +1,62 @@
+package com.example.qless;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+
+public class SignUpContext {
+
+	static SignUpContext sharedServerContext = null;
+	public ThreadPoolExecutor queue;
+	SharedPreferences preferences ;
+	
+	public  SignUpContext() {
+		init();
+	}
+	
+	void init()
+	{
+		 preferences  =  PreferenceManager.getDefaultSharedPreferences(MainApplication.getContext());
+		 int defaultCorePoolSize  =  1;
+		 int defaultMaximumPoolSize  =  2;
+		 long defaultKeepAliveTime  =  10;
+		 TimeUnit defaultTimeUnit  =  TimeUnit.SECONDS;
+		 BlockingQueue<Runnable> workQueue  =  new LinkedBlockingQueue<Runnable>();
+		 this.queue  =  new ThreadPoolExecutor(defaultCorePoolSize,defaultMaximumPoolSize ,defaultKeepAliveTime,defaultTimeUnit , workQueue);
+	}
+
+	public static SignUpContext sharedServerContext()
+	{
+		if(sharedServerContext  ==  null)
+		{
+			sharedServerContext =  new SignUpContext();
+			return sharedServerContext;
+		}
+		return sharedServerContext;
+	}
+	
+	
+	public  void stop(Runnable task)
+	{
+			try {
+				if(queue != null && task != null){
+					queue.remove(task)  ;
+				}
+				
+				if(queue != null ){
+					queue.getQueue().clear();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+	
+	
+}

@@ -1,0 +1,46 @@
+package com.example.qless;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ListView;
+
+public class SelectBankActivity extends Activity
+{
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.bank);
+		List<BankList> list = new ArrayList<BankList>();
+		ListView listView = (ListView) findViewById(R.id.bank_list);
+		listView.setAdapter(new BankAdaptor(SelectBankActivity.this, list));
+		
+		BankList b1 = new BankList();
+		b1.setBank_name("MSRIT");
+		b1.setBid(123);
+		b1.setBank_latitude(13.031441);
+		b1.setBank_longitude(77.565176);
+		BankList b2 = new BankList();
+		b2.setBank_name("RT Nagar");
+		b2.setBid(310);
+		b2.setBank_latitude(13.019894);
+		b2.setBank_longitude(77.596860);		
+		BankList b3 = new BankList();
+		b3.setBank_name("Majectic");
+		b3.setBid(678);
+		b3.setBank_latitude(12.977300);
+		b3.setBank_longitude(77.572868);
+		BankList b4 = new BankList();
+		b4.setBank_name("HSR");
+		b4.setBid(678);
+		b4.setBank_latitude(12.977195);
+		b4.setBank_longitude(77.572857);
+		BankList b5 = new BankList();
+		b5.setBank_name("Whitefield");
+		b5.setBid(678);
+		b4.setBank_latitude(12.970013);
+		b4.setBank_longitude(77.749912);
+	}
+}

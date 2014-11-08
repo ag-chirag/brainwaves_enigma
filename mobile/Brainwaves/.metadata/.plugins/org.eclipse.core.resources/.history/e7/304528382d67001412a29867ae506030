@@ -1,0 +1,149 @@
+package com.zootr.matchup.json;
+
+public class SignUpResponseJson {
+
+	private String leaderboard_id;
+	private String  description;
+	private int  response_status;
+	private String  error_message;
+	private int  error_code;
+	private int  id;
+	private String  last_logged_in;
+	private int  current_points;
+	private int  remaining_chips;
+	private String name;
+	private String image_url;
+	/**
+	 * @return the leaderboard_id
+	 */
+	public String getLeaderboard_id() {
+		return leaderboard_id;
+	}
+	/**
+	 * @param leaderboard_id the leaderboard_id to set
+	 */
+	public void setLeaderboard_id(String leaderboard_id) {
+		this.leaderboard_id = leaderboard_id;
+	}
+	/**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+	/**
+	 * @param description the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	/**
+	 * @return the response_status
+	 */
+	public int getResponse_status() {
+		return response_status;
+	}
+	/**
+	 * @param response_status the response_status to set
+	 */
+	public void setResponse_status(int response_status) {
+		this.response_status = response_status;
+	}
+	/**
+	 * @return the error_message
+	 */
+	public String getError_message() {
+		return error_message;
+	}
+	/**
+	 * @param error_message the error_message to set
+	 */
+	public void setError_message(String error_message) {
+		this.error_message = error_message;
+	}
+	/**
+	 * @return the error_code
+	 */
+	public int getError_code() {
+		return error_code;
+	}
+	/**
+	 * @param error_code the error_code to set
+	 */
+	public void setError_code(int error_code) {
+		this.error_code = error_code;
+	}
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+	/**
+	 * @return the last_logged_in
+	 */
+	public String getLast_logged_in() {
+		return last_logged_in;
+	}
+	/**
+	 * @param last_logged_in the last_logged_in to set
+	 */
+	public void setLast_logged_in(String last_logged_in) {
+		this.last_logged_in = last_logged_in;
+	}
+	/**
+	 * @return the current_points
+	 */
+	public int getCurrent_points() {
+		return current_points;
+	}
+	/**
+	 * @param current_points the current_points to set
+	 */
+	public void setCurrent_points(int current_points) {
+		this.current_points = current_points;
+	}
+	/**
+	 * @return the remaining_chips
+	 */
+	public int getRemaining_chips() {
+		return remaining_chips;
+	}
+	/**
+	 * @param remaining_chips the remaining_chips to set
+	 */
+	public void setRemaining_chips(int remaining_chips) {
+		this.remaining_chips = remaining_chips;
+	}
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+	/**
+	 * @return the image_url
+	 */
+	public String getImage_url() {
+		return image_url;
+	}
+	/**
+	 * @param image_url the image_url to set
+	 */
+	public void setImage_url(String image_url) {
+		this.image_url = image_url;
+	}
+	
+}

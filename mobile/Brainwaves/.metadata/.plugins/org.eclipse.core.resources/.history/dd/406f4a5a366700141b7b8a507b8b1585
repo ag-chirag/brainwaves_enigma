@@ -1,0 +1,245 @@
+package com.example.qless;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import android.content.Context;
+import android.util.Log;
+import android.view.View;
+import android.R;
+
+public class SignUpManager {
+
+
+	private static String TAG ="zootr";
+	Context context;
+	public SignUpDelegate delegate;
+
+	public SignUpManager(Context context)
+	{
+
+		this.context = context;
+	}
+
+
+
+	public SignUpResponseJson signupPlayerProfile(int id, String gPlusId,String fbId,
+			String displayName, String email, String gender, String image,
+			String currentLocation, String match_id) throws MalformedURLException, IOException 	{
+
+		SignUpResponseJson  signUpResponseJsons = null;
+		String urlString = "";
+		URL url  =  null;
+//		urlString = context.getResources().getString(R.string.base_url) + context.getResources().getString(R.string.signup_url);
+
+		url  =  new URL(urlString);
+
+		//	Log.i("test-url",url.toString());
+
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.setUseCaches(false);
+		connection.connect();
+
+		HttpURLConnection httpConnection  =  (HttpURLConnection) connection;
+		int responseCode  =  httpConnection.getResponseCode();
+		//		Log.i("test-responsecode",String.valueOf(responseCode));
+		if (responseCode   ==   HttpURLConnection.HTTP_OK) {
+			//			Log.i("test","inside if");
+			InputStream in  =  httpConnection.getInputStream();
+			Gson gson  =  new Gson();
+			Reader r  =  new InputStreamReader(in);
+
+			Type DataType  =  new TypeToken<SignUpResponseJson>() {
+			}.getType();
+
+			signUpResponseJsons  =  gson.fromJson(r,DataType);
+			Log.i(TAG, gson.toJson(signUpResponseJsons).toString());
+
+		}
+
+
+		httpConnection.disconnect();
+
+		return signUpResponseJsons;
+	}
+
+	public SignUpResponseJson updatePlayerProfile(int id, String gPlausId , String fbId,String currentAccountName, String match_id) throws MalformedURLException, IOException   
+	{
+
+		SignUpResponseJson  signUpResponseJsons = null;
+		String urlString = "";
+		URL url  =  null;
+//		urlString = context.getResources().getString(R.string.base_url) + context.getResources().getString(R.string.signup_url);
+		url  =  new URL(urlString);
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.setUseCaches(false);
+		connection.connect();
+
+		HttpURLConnection httpConnection  =  (HttpURLConnection) connection;
+		int responseCode  =  httpConnection.getResponseCode();
+		if (responseCode   ==   HttpURLConnection.HTTP_OK) {
+
+			InputStream in  =  httpConnection.getInputStream();
+			Gson gson  =  new Gson();
+			Reader r  =  new InputStreamReader(in);
+
+			Type DataType  =  new TypeToken<SignUpResponseJson>() {
+			}.getType();
+
+			signUpResponseJsons  =  gson.fromJson(r,DataType);
+			Log.i(TAG, gson.toJson(signUpResponseJsons).toString());
+
+		}
+		httpConnection.disconnect();
+
+		return signUpResponseJsons;
+	
+
+	public void signupPlayerProfile(int id, String gPlusId, String fbId,
+			String displayName, String eamil, String gender, String image,
+			String currentLocation, String match_id, SignUpDelegate delegate) {
+		SignupPlayerProfileOperation operation  = new SignupPlayerProfileOperation();
+
+		operation.delegate = delegate;
+		operation.signUpManager = this;
+		operation.displayName = displayName;
+		operation.id = id;
+		operation.match_id = match_id;
+		SignUpContext.sharedServerContext().queue.execute(operation);
+	}
+
+	public void signinPlayerProfile(int id,String email,String pwd, SignUpDelegate delegate)
+	{
+		EmailSignInOperation operation  = new EmailSignInOperation();
+		operation.delegate = delegate;
+		operation.signUpManager = this;
+		operation.email = email;
+		operation.pwd = pwd;
+		SignUpContext.sharedServerContext().queue.execute(operation);
+	}
+
+
+
+	public SignUpResponseJson signinPlayerProfile(int id, String email,String pwd) {
+		SignUpResponseJson  signUpResponseJsons = null;
+		String urlString = "";
+		URL url  =  null;
+		urlString = context.getResources().getString(R.string.base_url) + context.getResources().getString(R.string.login_url);
+
+		Log.i("test-user id",String.valueOf(id));;
+		Log.i("test",email);
+		urlString += "id="+id+"&email="+email+"&password="+pwd;
+
+		Log.i(TAG, "base_url signupPlayerProfile signup_url   url " + urlString);
+
+
+		try {
+			url  =  new URL(urlString);
+
+
+			//	Log.i("test-url",url.toString());
+
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setUseCaches(false);
+			connection.connect();
+
+			HttpURLConnection httpConnection  =  (HttpURLConnection) connection;
+			int responseCode  =  httpConnection.getResponseCode();
+			//		Log.i("test-responsecode",String.valueOf(responseCode));
+			if (responseCode   ==   HttpURLConnection.HTTP_OK) {
+				//			Log.i("test","inside if");
+				InputStream in  =  httpConnection.getInputStream();
+				Gson gson  =  new Gson();
+				Reader r  =  new InputStreamReader(in);
+
+				Type DataType  =  new TypeToken<SignUpResponseJson>() {
+				}.getType();
+
+				signUpResponseJsons  =  gson.fromJson(r,DataType);
+				Log.i(TAG, gson.toJson(signUpResponseJsons).toString());
+
+			}
+
+			httpConnection.disconnect();
+
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return signUpResponseJsons;
+	}
+
+	public void emailSignUpPlayerProfile(String email,String pwd,String name, SignUpDelegate delegate,SignUp activity)
+	{
+		EmailSignUpOperation operation  = new EmailSignUpOperation();
+		operation.delegate = delegate;
+		operation.signUpManager = this;
+		operation.email = email;
+		operation.pwd = pwd;
+		operation.name = name;
+		SignUpContext.sharedServerContext().queue.execute(operation);
+		activity.findViewById(R.id.signup_head).setVisibility(View.GONE);
+		activity.findViewById(R.id.signup_box).setVisibility(View.GONE);
+		activity.findViewById(R.id.waiting).setVisibility(View.VISIBLE);
+	}
+
+
+
+	public SignUpResponseJson emailSignUpPlayerProfile(String email,String pwd,String name) {
+		SignUpResponseJson  signUpResponseJsons = null;
+		String urlString = "";
+		URL url  =  null;
+		urlString = context.getResources().getString(R.string.base_url) + context.getResources().getString(R.string.signup_url);
+
+		urlString += "password="+pwd+"&email="+email+"&name="+name;
+
+		Log.i(TAG, "base_url signupPlayerProfile signup_url   url " + urlString);
+
+
+		try {
+			url  =  new URL(urlString);
+
+
+			//	Log.i("test-url",url.toString());
+
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setUseCaches(false);
+			connection.connect();
+
+			HttpURLConnection httpConnection  =  (HttpURLConnection) connection;
+			int responseCode  =  httpConnection.getResponseCode();
+			//		Log.i("test-responsecode",String.valueOf(responseCode));
+			if (responseCode   ==   HttpURLConnection.HTTP_OK) {
+				//			Log.i("test","inside if");
+				InputStream in  =  httpConnection.getInputStream();
+				Gson gson  =  new Gson();
+				Reader r  =  new InputStreamReader(in);
+
+				Type DataType  =  new TypeToken<SignUpResponseJson>() {
+				}.getType();
+
+				signUpResponseJsons  =  gson.fromJson(r,DataType);
+				Log.i(TAG, gson.toJson(signUpResponseJsons).toString());
+
+			}
+			httpConnection.disconnect();
+
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return signUpResponseJsons;
+	}
+
+}

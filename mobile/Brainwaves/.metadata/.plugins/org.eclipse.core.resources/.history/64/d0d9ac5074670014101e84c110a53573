@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.qless.StatusActivity" >
+
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/heading"
+       	android:text="@string/status"
+       	android:layout_marginTop="5dp"
+       	android:layout_centerHorizontal="true" 
+       	android:textColor="@color/blue"
+        android:textSize="30sp"
+        />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/accounts"
+       	android:text="@string/accounts"
+       	android:layout_marginTop="10dp"
+       	android:layout_centerHorizontal="true"
+       	android:layout_below="@id/heading" 
+        android:textSize="20sp"
+        />
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/crowd1"
+       	android:text="@string/crowd"
+       	android:layout_below="@id/accounts"
+       	android:layout_marginTop="5dp"
+       	android:gravity="left"
+        android:textSize="15sp"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customer_number1"
+        android:text="0"
+        android:layout_below="@id/accounts"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:textSize="15sp" 
+        />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/wait1"
+       	android:text="@string/time"
+       	android:layout_below="@id/crowd1"
+       	android:layout_marginTop="5dp"
+       	android:gravity="left"
+        android:textSize="15sp"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_left1"
+        android:text="0"
+        android:layout_below="@id/wait1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:textSize="15sp" 
+        />
+  
+    
+     <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/loans"
+       	android:text="@string/loans"
+       	android:layout_marginTop="10dp"
+       	android:layout_centerHorizontal="true"
+       	android:layout_below="@id/wait1" 
+        android:textSize="20sp"
+        />
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/dept1"
+       	android:text="@string/crowd"
+       	android:layout_below="@id/accounts"
+       	android:layout_marginTop="5dp"
+       	android:gravity="left"
+        android:textSize="15sp"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customer_number"
+        android:text="0"
+        android:layout_below="@id/accounts"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:textSize="15sp" 
+        />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:id="@+id/textview3"
+       	android:text="@string/time"
+       	android:layout_below="@id/dept1"
+       	android:layout_marginTop="5dp"
+       	android:gravity="left"
+        android:textSize="15sp"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_left"
+        android:text="0"
+        android:layout_below="@id/dept1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:textSize="15sp" 
+        />   
+</RelativeLayout>

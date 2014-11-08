@@ -1,0 +1,42 @@
+package com.example.qless;
+import android.util.Log;
+
+
+public class EmailSignUpOperation implements Runnable {
+
+	SignUpManager signUpManager;
+	SignUpDelegate delegate;
+	public int id;
+	public String email;
+	public String pwd;
+	public String name;
+//	public SignUp activity;
+
+
+	public void run() {
+		try {
+
+			if(Utils.isConnectedToNetwork()){
+
+				SignUpResponseJson  signUpResponseJsons ;				
+				signUpResponseJsons 	= signUpManager.emailSignUpPlayerProfile(email,pwd,name);
+
+				if(signUpResponseJsons != null ) {
+					Utils.saveData("sign-in-type", "email");
+					delegate.notifySginUp(signUpResponseJsons);
+				}
+			}
+			else {
+				delegate.failSignUp(MainApplication.getContext().getString("Network"), 1);
+			}
+
+		} catch (Exception e) {
+			Log.i("zootr", "IOException SignUpOperation  ", e);
+
+			delegate.failSignUp(MainApplication.getContext().getString("Try Again Later"), 2);
+			//e.printStackTrace();
+		}
+
+	}
+
+}

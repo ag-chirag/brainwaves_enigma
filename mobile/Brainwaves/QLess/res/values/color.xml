@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue">#446a99</color>
+    <color name="red">#FF0000</color>
+    <color name="black">#000000</color>
+    <color name="green">#138808</color>
+    <color name="bar">#ff0000</color>
+    <color name="white">#fff</color>
+    <color name="gray">#eeeeee</color>
+    <color name="grey">	#CECECE</color>
+    <color name="splash_bg">#eb5115</color>
+        <color name="disable">#ccc</color>
+    
+    <color name="light_gray">#eeeeee</color>
+    <color name="dark_gray">#424244</color>
+    <color name="sirius_black">#000000</color>
+    <color name="app_color">#ff8033</color>
+    <color name="dashboard_bar">#ff8033</color>
+    <color name="fixture_title">#000000</color>
+    <color name="fixture_teams">#000</color>
+    <color name="fixture_status">#000</color>
+    <color name="score">#000</color>
+    <color name="bar_sel">#ffa233</color>
+    <color name="transparent_100">#FF000000</color>
+    <color name="transparent_95">#F2000000</color>
+    <color name="transparent_90">#E6000000</color>
+    <color name="transparent_85">#D9000000</color>
+    <color name="transparent_80">#CC000000</color>
+    <color name="transparent_75">#BF000000</color>
+    <color name="transparent_70">#B3000000</color>
+    <color name="transparent_65">#A6000000</color>
+    <color name="transparent_60">#99000000</color>
+    <color name="transparent_55">#8C000000</color>
+    <color name="transparent_50">#80000000</color>
+    <color name="transparent_45">#73000000</color>
+    <color name="transparent_40">#66000000</color>
+    <color name="transparent_35">#59000000</color>
+    <color name="transparent_30">#4D000000</color>
+    <color name="transparent_25">#40000000</color>
+    <color name="transparent_20">#33000000</color>
+    <color name="transparent_15">#26000000</color>
+    <color name="transparent_10">#1A000000</color>
+    <color name="transparent_">#0D000000</color>
+    <color name="transparent_0">#00000000</color>
+    <color name="dashboard_bg">#eeeeee</color>
+    <color name="circle_dashbord_count">#333333</color>
+    <color name="live">#cc1111</color>
+    <color name="no_matches_sel">#424244</color>
+    <color name="no_matches_def">#333333</color>
+    <color name="no_matches">#999999</color>
+    <color name="bar_header">#2f74a7</color>
+    <color name="chart_won">#2f74a7</color>
+    <color name="chart_lost">#cc1111</color>
+    <color name="chart_tie">#e04a3b</color>
+    <color name="achievement">#3d96d8</color>
+    <color name="player_name_solo">#ed5114</color>
+    <color name="hrr">#333333</color>
+    <color name="h_h_header">#666666</color>
+    <color name="h_h_text">#333333</color>
+    <color name="app_green">#779f38</color>
+        <color name="transparent_50_app_color">#80ff8033</color>
+    
+</resources>
