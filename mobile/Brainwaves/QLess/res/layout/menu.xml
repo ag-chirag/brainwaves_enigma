@@ -48,6 +48,12 @@
        android:onClick="OnPlanButtonClick"
        android:background="@drawable/round_login_button"
       />
-   
+   <TextView android:id="@+id/location_box"
+       		android:layout_below="@+id/plan_button"
+       		android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:paddingTop="10dp"
+       		android:textSize="15sp"
+       		android:text="hi"/>
    
 </RelativeLayout>

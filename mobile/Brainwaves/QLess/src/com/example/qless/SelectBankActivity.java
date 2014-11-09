@@ -59,7 +59,7 @@ public class SelectBankActivity extends Activity
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 				// TODO Auto-generated method stub
-		        String s = (String)listView.getItemAtPosition(position);
+		       // String s = (String)listView.getItemAtPosition(position);
 		        BankList item = (BankList)ba.getItem(position);
 		        SharedPreferences.Editor editor;
 		        SharedPreferences bid = getSharedPreferences("bank",0);
@@ -70,7 +70,7 @@ public class SelectBankActivity extends Activity
 
                     @Override
                     public void run() {
-                    	Intent i = new Intent(bank_activity,SignUp.class);
+                    	Intent i = new Intent(bank_activity,Home.class);
         	    		startActivity(i); 
                     }
                 });

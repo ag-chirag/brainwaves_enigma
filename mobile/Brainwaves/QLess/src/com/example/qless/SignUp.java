@@ -65,11 +65,11 @@ public class SignUp extends Activity implements SignUpDelegate
 		}
 		else
 		{
-			if(!validate(email_text))
-			{
-
-				return;    			
-			}
+//			if(!validate(email_text))
+//			{
+//
+//				return;    			
+//			}
 		}
 
 
@@ -95,7 +95,8 @@ public class SignUp extends Activity implements SignUpDelegate
 
 	@Override
 	public void notifySginUp(SignUpResponseJson signUpResponseJsons) {
-
+		
+		System.out.println(signUpResponseJsons.toString());
 		if(signUpResponseJsons.getUserId() > 0)
 		{
 
@@ -120,7 +121,8 @@ public class SignUp extends Activity implements SignUpDelegate
 			public void run() {
 
 				Utils.saveData("logged in", true);
-				Intent i = new Intent(SignUp.this, MainActivity.class);
+				//Intent i = new Intent(SignUp.this, Home.class);
+				Intent i = new Intent(SignUp.this, SelectBankActivity.class);
 				startActivity(i);
 
 			}

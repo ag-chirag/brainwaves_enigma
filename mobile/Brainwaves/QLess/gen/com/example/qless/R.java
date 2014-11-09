@@ -1173,7 +1173,7 @@ containing a value of this type.
         public static final int collapseActionView=0x7f05000d;
         public static final int container=0x7f05003c;
         public static final int crowd1=0x7f050047;
-        public static final int crt_accnt=0x7f05006b;
+        public static final int crt_accnt=0x7f05006c;
         public static final int customer_number1=0x7f050048;
         public static final int customer_number2=0x7f05004d;
         public static final int customer_number3=0x7f050052;
@@ -1187,11 +1187,11 @@ containing a value of this type.
         public static final int distance=0x7f05005d;
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
-        public static final int email_address_signup=0x7f050067;
+        public static final int email_address_signup=0x7f050068;
         public static final int end=0x7f050013;
-        public static final int envelope=0x7f050066;
-        public static final int envelope_parent=0x7f050065;
-        public static final int error=0x7f050064;
+        public static final int envelope=0x7f050067;
+        public static final int envelope_parent=0x7f050066;
+        public static final int error=0x7f050065;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int heading=0x7f050045;
@@ -1203,16 +1203,17 @@ containing a value of this type.
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int loans=0x7f05004b;
-        public static final int lock=0x7f050069;
-        public static final int lock_parent=0x7f050068;
-        public static final int logo=0x7f05006d;
-        public static final int message=0x7f05006e;
+        public static final int location_box=0x7f050062;
+        public static final int lock=0x7f05006a;
+        public static final int lock_parent=0x7f050069;
+        public static final int logo=0x7f05006e;
+        public static final int message=0x7f05006f;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int others=0x7f050055;
-        public static final int password_signup=0x7f05006a;
+        public static final int password_signup=0x7f05006b;
         public static final int plan_button=0x7f050061;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
@@ -1232,8 +1233,8 @@ containing a value of this type.
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-        public static final int signup_box=0x7f050063;
-        public static final int signup_head=0x7f050062;
+        public static final int signup_box=0x7f050064;
+        public static final int signup_head=0x7f050063;
         public static final int split_action_bar=0x7f05001e;
         public static final int status_button=0x7f05005f;
         public static final int submit=0x7f050044;
@@ -1257,7 +1258,7 @@ containing a value of this type.
         public static final int wait2=0x7f05004e;
         public static final int wait3=0x7f050053;
         public static final int wait4=0x7f050058;
-        public static final int waiting=0x7f05006c;
+        public static final int waiting=0x7f05006d;
         public static final int welcome=0x7f05005e;
         public static final int withText=0x7f05000c;
     }

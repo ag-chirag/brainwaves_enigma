@@ -1,0 +1,19 @@
+package com.example.qless;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class StatusActivity extends Activity {
+
+	TextView customer1,customer2,customer3,customer4;
+	TextView time1,time2,time3,time4;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_status);
+		
+		custome=(TextView)findViewByid(R.id.customer_number1)
+	}
+}

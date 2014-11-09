@@ -50,10 +50,10 @@ public class SignUpManager {
 		SignUpResponseJson  signUpResponseJsons = null;
 		String urlString = "";
 		URL url  =  null;
-		urlString = "http://brainwave.byethost11.com/login?";
-		urlString += "password="+pwd+"&email="+email;
+		urlString = "http://brainwave.byethost11.com/enigma/mobilelogin.php?";
+		urlString += "pswd="+pwd+"&uname="+email;
 
-		Log.i(TAG, "base_url signupPlayerProfile signup_url   url " + urlString);
+	//	Log.i(TAG, "base_url signupPlayerProfile signup_url   url " + urlString);
 
 
 		try {

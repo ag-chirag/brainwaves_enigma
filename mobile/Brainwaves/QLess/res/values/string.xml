@@ -32,9 +32,9 @@
     </string-array>
     <string name="category_prompt">Category</string>
 <string-array name="category_list">
-	    <item>Account</item>
-	    <item>Transaction</item>
-	    <item>Loan</item>
-	    <item>Others</item>
+	    <item>account</item>
+	    <item>transaction</item>
+	    <item>loan</item>
+	    <item>others</item>
 	</string-array>
 </resources>
